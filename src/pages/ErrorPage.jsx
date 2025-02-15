@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom";
+import { NavLink, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
   const err = useRouteError();
@@ -10,6 +10,9 @@ const ErrorPage = () => {
           Error status:{err.status} {err.statusText} <br /> {err.data}
         </p>
       )}
+      <NavLink to="/">
+        <button>Go back to Home</button>
+      </NavLink>
     </div>
   );
 };
